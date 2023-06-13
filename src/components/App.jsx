@@ -7,19 +7,11 @@ import { Filter } from './Filter/Filter';
 import { InputForm } from './InputForm/InputForm';
 
 export const App = () => {
-  // const [contacts, setContacts] = useState(() => {
-  //   return JSON.parse(localStorage.getItem('STATE')) || [];
-  // });
-
   const { contacts } = useSelector(getContacts);
 
   const { filter } = useSelector(getFilter);
 
   const dispatch = useDispatch();
-
-  // useEffect(() => {
-  //   localStorage.setItem('STATE', JSON.stringify(contacts));
-  // }, [contacts]);
 
   const addContact = (name, number) => {
     const contact = { name, number };
